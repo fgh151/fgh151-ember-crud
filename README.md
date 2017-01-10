@@ -1,27 +1,32 @@
 # fgh151-ember-crud
 
-This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd fgh151-ember-crud`
-* `npm install`
-* `bower install`
+* `cd /projet/folder`
+* `npm install fgh151-ember-crud`
 
 ## Running
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* `ember g fgh152-crud foo`
+* in `config/enviroment.js` add pod prefix, like
+```js
+module.exports = function(environment) {
+  var ENV = {
+    modulePrefix: 'project',
+    podModulePrefix: 'project/pods',
+    ...
+  }
+}
+```
 
-## Running Tests
-
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+* Add rules to `app/router.js`:
+```js
+  ...
+  this.route('foos', function() {
+    this.route('show', { path: ':foo_id' });
+    this.route('new');
+    this.route('edit', { path: ':foo_id/edit' });
+  });
+  ...
+```
