@@ -1,17 +1,24 @@
 {
   "name": "fgh151-ember-crud",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "CRUD generator for ember.js",
   "keywords": [
     "ember-addon, crud"
   ],
+  "homepage": "https://openitstudio.ru/",
+  "bugs": {
+    "url": "https://github.com/fgh151/fgh151-ember-crud/issues"
+  },
   "license": "MIT",
-  "author": "FEdor B Gorsky",
+  "author": "Fedor B Gorsky <fedor@support-pc.org> (https://openitstudio.ru/)",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fgh151/fgh151-ember-crud"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember server",
